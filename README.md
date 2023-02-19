@@ -2,32 +2,32 @@
 This project is a computer simulator application that runs a language called Hatchling Machine Language (HML). It can perform several actions such as mathematical operations and line jumping, as well as simulates memory that stores and loads words, and an accumulator register that executes instructions. Each instruction is a 4-digit hexadecimal number: The first 2 digits indicate which operation should be performed, and the second 2 digits indicate the address of the "memory" location containing the word that the instruction applies to. The operation codes are as follows:
 
 Mathematical Operations:
-0x10 : Adds a word from a specific location in memory to the word in the accumulator. The result is left in the accumulator.
-0x11 : Subtracts a word from a specific location in memory from the word in the accumulator. The result is left in the accumulator.
-0x12 : Multiplies a word from a specific location in memory by the word in the accumulator. The result is left in the accumulator.
-0x13 : Divides the word in the accumulator by a word from a specific location in memory. The result is left in the accumulator.
-0x14 : Computes the integer remainder when dividing the word in the accumulator by a word from a specific location in memory. The result is left in the accumulator.
+1. 0x10 : Adds a word from a specific location in memory to the word in the accumulator. The result is left in the accumulator.
+2. 0x11 : Subtracts a word from a specific location in memory from the word in the accumulator. The result is left in the accumulator.
+3. 0x12 : Multiplies a word from a specific location in memory by the word in the accumulator. The result is left in the accumulator.
+4. 0x13 : Divides the word in the accumulator by a word from a specific location in memory. The result is left in the accumulator.
+5. 0x14 : Computes the integer remainder when dividing the word in the accumulator by a word from a specific location in memory. The result is left in the accumulator.
 Logical Instructions:
-0x20 : Computes the binary AND of a specific location in memory and the accumulator. The result is left in the accumulator.
-0x21 : Computes the binary OR of a specific location in memory and the accumulator. The result is left in the accumulator.
-0x22 : Computes the binary NOT of a specific location in memory and the accumulator. The result is left in the accumulator.
-0x23 : Computes the binary XOR of a specific location in memory and the accumulator. The result is left in the accumulator.
-0x24 : Computes the binary logical shift right of the accumulator. The result is left in the accumulator.
-0x25 : Computes the binary arithmetic shift right of the accumulator. The result is left in the accumulator.
-0x26 : Computes the binary logical shift left of the accumulator. The result is left in the accumulator.
+1. 0x20 : Computes the binary AND of a specific location in memory and the accumulator. The result is left in the accumulator.
+2. 0x21 : Computes the binary OR of a specific location in memory and the accumulator. The result is left in the accumulator.
+3. 0x22 : Computes the binary NOT of a specific location in memory and the accumulator. The result is left in the accumulator.
+4. 0x23 : Computes the binary XOR of a specific location in memory and the accumulator. The result is left in the accumulator.
+5. 0x24 : Computes the binary logical shift right of the accumulator. The result is left in the accumulator.
+6. 0x25 : Computes the binary arithmetic shift right of the accumulator. The result is left in the accumulator.
+7. 0x26 : Computes the binary logical shift left of the accumulator. The result is left in the accumulator.
 Branching Instructions:
-0x30 : Branch to a specific location in memory.
-0x31 : Branch to a specific location in memory if the accumulator is negative.
-0x32 : Branch to a specific location in memory if the accumulator is positive.
-0x33 : Branch to a specific location in memory if the accumulator is zero.
+1. 0x30 : Branch to a specific location in memory.
+2. 0x31 : Branch to a specific location in memory if the accumulator is negative.
+3. 0x32 : Branch to a specific location in memory if the accumulator is positive.
+4. 0x33 : Branch to a specific location in memory if the accumulator is zero.
 Load/Store Instructions:
-0x40 : Loads a word from a specific location in memory to the accumulator.
-0x41 : Stores the word in the accumulator into a specific location in memory.
+1. 0x40 : Loads a word from a specific location in memory to the accumulator.
+2. 0x41 : Stores the word in the accumulator into a specific location in memory.
 I/O Instructions:
-0x50 : Reads a word from the terminal into a specific location in memory.
-0x51 : Writes a word from a specific location in memory to the terminal.
+1. 0x50 : Reads a word from the terminal into a specific location in memory.
+2. 0x51 : Writes a word from a specific location in memory to the terminal.
 Halt Instruction:
-0xFF : Stops the program.
+1. 0xFF : Stops the program.
 
 Instructions will be stored in memory starting at location 00. Hatchling's "memory" has a capacity of 256 words, so the operand part of the instruction can be any hexadecimal number between 00 and FF (inlcusive). Variables can also be created by putting a hexadecimal value in the line number of the program that corresponds to the desired place in memory if the line numbers start at 0, or the desired place in memory + 1 if the line numbers start at 1.
 An example program may look something like this (The numbers on the left hand side indicate the memory location where the instruction/word is stored. A real HML program would only include the 4-digit instructions, not the memory locations or comments.):
