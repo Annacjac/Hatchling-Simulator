@@ -30,7 +30,7 @@ This project is a computer simulator application written in C that runs a langua
 &nbsp;&nbsp;&nbsp;&nbsp;0xFF : Stops the program.  
 
 Instructions will be stored in memory starting at location 00. Hatchling's "memory" has a capacity of 256 words, so the operand part of the instruction can be any hexadecimal number between 00 and FF (inlcusive). Variables can also be created by putting a hexadecimal value in the line number of the program that corresponds to the desired place in memory if the line numbers start at 0, or the desired place in memory + 1 if the line numbers start at 1.
-An example program may look something like this (The numbers on the left hand side indicate the memory location where the instruction/word is stored. A real HML program would only include the 4-digit instructions, not the memory locations or comments.):
+An example program may look something like this (The numbers on the left hand side indicate the memory location where the instruction/word is stored, for example purposes only. A real HML program would only include the 4-digit instructions, not the memory locations or comments.):
 ```
 00   4004  //Loads the word in location 04 into the accumulator.  
 01   1005  //Adds the word in location 05 to the word in the accumulator.  
