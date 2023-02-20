@@ -57,3 +57,5 @@ Instructions on downloading and running the program:
 3. If you're not using a pre-made HML program, simply type 'hatchling' and press enter. You can then input your instructions.
 4. If you are using a pre-made program, type 'hatchling' followed by the name of the program. Example: 'hatchling one.hml'. The program must be in the same location as the files of the repository. After pressing enter, it will automatically execute the instructions and prommt for input accordingly.
 5. If you'd like to make your own separate HML program, you can create a new text file in that same folder and type your instructions. It is recommended that you change the file extention to .hml, just so it's easier to distinguish as a HML program.
+
+Finally, the C code is available to look at as well, in the file hatchling.c.
