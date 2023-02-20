@@ -1,5 +1,5 @@
 # Hatchling Simulator
-This project is a computer simulator application that runs a language called Hatchling Machine Language (HML). It can perform several actions such as mathematical operations and line jumping, as well as simulates memory that stores and loads words, and an accumulator register that executes instructions. Each instruction is a 4-digit hexadecimal number: The first 2 digits indicate which operation should be performed, and the second 2 digits indicate the address of the "memory" location containing the word that the instruction applies to. The operation codes are as follows:
+This project is a computer simulator application written in C that runs a language called Hatchling Machine Language (HML). It can perform several actions such as mathematical operations and line jumping, as well as simulates memory that stores and loads words, and an accumulator register that executes instructions. Each instruction is a 4-digit hexadecimal number: The first 2 digits indicate which operation should be performed, and the second 2 digits indicate the address of the "memory" location containing the word that the instruction applies to. The operation codes are as follows:
 
 **Mathematical Operations:**  
 &nbsp;&nbsp;&nbsp;&nbsp;0x10 : Adds a word from a specific location in memory to the word in the accumulator. The result is left in the accumulator.  
